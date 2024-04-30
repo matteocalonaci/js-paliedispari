@@ -17,40 +17,38 @@ console.log(`Hai scelto il numero:${sceltaUtenteNumero}`);
 
 // funzione numero random per pc
 let numeroComputer = getRandomNumber(1, 5);
+console.log(`La CPU ha scelto:${numeroComputer}`);
+
+
+
+// somma risultati
+let somma = sceltaUtenteNumero + numeroComputer;
+console.log(`La somma è ${somma}`);
+
+//controllo se valore fornito sia pari o dispari
+let risultato;
+if (somma % 2 == 0) {
+    risultato = "pari";
+} else {
+    somma = false;
+}
+
+console.log(risultato);
+
+
+// il vincitore è...
+if (risultato == sceltaUtente && sceltaUtente == sceltaUtente) {
+    console.log("HAI VINTO!");
+} else {
+    console.log("HAI PERSO!");
+
+}
+
+
+// FUNZIONE
 
 // input: range inteso come min e max 
 // Output: un numero casuale in quel range
 function getRandomNumber(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
-}
-console.log(`La CPU ha scelto:${numeroComputer}`);
-
-// somma risultati
-let risultato = sceltaUtenteNumero + numeroComputer;
-console.log(`La somma è ${risultato}`);
-
-
-function pariOrDispari(risultato) {
-
-    //controllo se valore fornito sia pari o dispari
-    if (risultato % 2 == 0) {
-        let odd = "pari";
-        return odd;
-    }
-
-    return "dispari";
-
-
-}
-
-let odd = "pari"
-let even = "dispari"
-// il vincitore è...
-if (risultato == odd && sceltaUtente == odd) {
-    console.log("HAI VINTO!");
-} else if (risultato == even && sceltaUtente == even) {
-    console.log("HAI VINTO!");
-} else {
-    console.log("HAI PERSO!");
-
 }
